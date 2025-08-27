@@ -1,156 +1,721 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>HTML5 Layout</title>
-		<style type="text/css">
-			header, section, footer, aside, nav, article, figure, figcaption {
-				display: block;}
-			body {
-				color: #666666;
-				background-color: #f9f8f6;
-				background-image: url("images/dark-wood.jpg");
-				background-position: center;
-				font-family: Georgia, Times, serif;
-				line-height: 1.4em;
-				margin: 0px;}
-			.wrapper {
-				width: 940px;
-				margin: 20px auto 20px auto;
-				border: 2px solid #000000;
-				background-color: #ffffff;}
-			header {
-				height: 160px;
-				background-image: url("images/header.jpg");}
-			h1 {
-				text-indent: -9999px;
-				width: 940px;
-				height: 130px;
-				margin: 0px;}
-			nav, footer {
-				clear: both;
-				color: #ffffff;
-				background-color: #aeaca8;
-				height: 30px;}
-			nav ul {
-				margin: 0px;
-				padding: 5px 0px 5px 30px;}
-			nav li {
-				display: inline;
-				margin-right: 40px;}
-			nav li a {
-				color: #ffffff;}
-			nav li a:hover, nav li a.current {
-				color: #000000;}
-			section.courses {
-				float: left;
-				width: 659px;
-				border-right: 1px solid #eeeeee;}
-			article {
-				clear: both;
-				overflow: auto;
-				width: 100%;}
-			hgroup {
-				margin-top: 40px;}
-			figure {
-				float: left;
-				width: 290px;
-				height: 220px;
-				padding: 5px;
-				margin: 20px;
-				border: 1px solid #eeeeee;}
-			figcaption {
-				font-size: 90%;
-				text-align: left;}
-			aside {
-				width: 230px;
-				float: left;
-				padding: 0px 0px 0px 20px;}
-			aside section a {
-				display: block;
-				padding: 10px;
-				border-bottom: 1px solid #eeeeee;}
-			aside section a:hover {
-				color: #985d6a;
-				background-color: #efefef;}
-			a {
-				color: #de6581;
-				text-decoration: none;}
-			h1, h2, h3 {
-				font-weight: normal;}
-			h2 {
-				margin: 10px 0px 5px 0px;
-				padding: 0px;}
-			h3 {
-				margin: 0px 0px 10px 0px;
-				color: #de6581;}
-			aside h2 {
-				padding: 30px 0px 10px 0px;
-				color: #de6581;}
-			footer {
-				font-size: 80%;
-				padding: 7px 0px 0px 20px;}
-		</style>
-		<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-		<div class="wrapper">
-			<header>
-				<h1>Yoko's Kitchen</h1>
-				<nav>
-					<ul>
-						<li><a href="" class="current">home</a></li>
-						<li><a href="">classes</a></li>
-						<li><a href="">catering</a></li>
-						<li><a href="">about</a></li>
-						<li><a href="">contact</a></li>
-					</ul>
-				</nav>
-			</header>
-			<section class="courses">
-				<article>
-					<figure>
-						<img src="images/bok-choi.jpg" alt="Bok Choi" />
-						<figcaption>Bok Choi</figcaption>
-					</figure>
-					<hgroup>
-						<h2>Japanese Vegetarian</h2>
-						<h3>Five week course in London</h3>
-					</hgroup>
-					<p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
-				</article>    
-				<article>
-					<figure>
-						<img src="images/teriyaki.jpg" alt="Teriyaki sauce" />
-						<figcaption>Teriyaki Sauce</figcaption>
-					</figure>
-					<hgroup>
-						<h2>Sauces Masterclass</h2>
-						<h3>One day workshop</h3>
-					</hgroup>
-					<p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
-				</article>    
-			</section>
-			<aside>
-				<section class="popular-recipes">
-					<h2>Popular Recipes</h2>
-					<a href="">Yakitori (grilled chicken)</a>
-					<a href="">Tsukune (minced chicken patties)</a>
-					<a href="">Okonomiyaki (savory pancakes)</a>
-					<a href="">Mizutaki (chicken stew)</a>
-				</section>
-				<section class="contact-details">
-					<h2>Contact</h2>
-					<p>Yoko's Kitchen<br />
-						27 Redchurch Street<br />
-						Shoreditch<br />
-						London E2 7DP</p>
-				</section>
-			</aside>
-			<footer>
-				&copy; 2011 Yoko's Kitchen
-			</footer>
-		</div><!-- .wrapper -->
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasad P R - AI Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066cc;
+            --secondary: #00a8ff;
+            --accent: #4834d4;
+            --dark: #1a1a2e;
+            --light: #16213e;
+            --text: #ffffff;
+            --text-muted: #a0a0a0;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="g"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23g)"/><circle cx="800" cy="300" r="150" fill="url(%23g)"/><circle cx="400" cy="700" r="120" fill="url(%23g)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideInLeft 1s ease;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            animation: slideInLeft 1s ease 0.2s both;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            animation: slideInLeft 1s ease 0.4s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            animation: slideInLeft 1s ease 0.6s both;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-visual {
+            text-align: center;
+            animation: slideInRight 1s ease;
+        }
+
+        .profile-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--gradient);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: var(--light);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--gradient);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            background: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background: var(--secondary);
+            border-radius: 50%;
+            top: 30px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .timeline-content h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .company {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: var(--gradient);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: var(--light);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .project-card .project-header {
+            background: var(--gradient);
+            padding: 1rem;
+            color: white;
+        }
+
+        .project-card .project-content {
+            padding: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        .contact-item a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Prasad P R</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>AI Engineer</h1>
+                    <div class="subtitle">Innovative • Experienced • Results-Driven</div>
+                    <p>With 8+ years of experience in developing AI applications using Python, OpenVINO, PyTorch, and TensorFlow. I specialize in optimizing models and building scalable, production-ready AI systems for customer-facing products.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="profile-image">PP</div>
+                        <h3>Prasad P R</h3>
+                        <p>AI Software Development Engineer @ Intel</p>
+                        <p>📍 Bengaluru, Karnataka, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>AI Software Development Engineer</h3>
+                        <div class="company">Intel Corporation | Jun 2022 — Present</div>
+                        <ul>
+                            <li>Achieved 10x performance enhancement on Intel GPU by optimizing transformer models</li>
+                            <li>Implemented automated pipeline reducing benchmarking time from 5 hours to 30 minutes</li>
+                            <li>Developed Real-Time 3D Camera Calibration reducing inference time by 80%</li>
+                            <li>Enhanced AI models boosting training and inference speeds by 30%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>System Software Development Engineer</h3>
+                        <div class="company">Intel Corporation | Aug 2018 — Jun 2022</div>
+                        <ul>
+                            <li>Led development of MERN stack Solution Delivery System with 1000+ downloads</li>
+                            <li>Improved access time by 30% through microservices architecture</li>
+                            <li>Reduced maintenance time by 80% through CICD integration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Software Engineering Intern</h3>
+                        <div class="company">Intel Corporation | Oct 2017 — Aug 2018</div>
+                        <ul>
+                            <li>Contributed to GitHub Archives program as part of Hyperledger Sawtooth</li>
+                            <li>Developed Angular JS UI for blockchain visualization</li>
+                            <li>Built POC for Stereo Vision and Computer Vision</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🧠 Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Generative AI</span>
+                        <span class="skill-tag">LLM</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Computer Vision</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🛠️ Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">HuggingFace</span>
+                        <span class="skill-tag">OpenVINO</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">ONNX</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>💻 Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🔍 Data & Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">Quantitative Analysis</span>
+                        <span class="skill-tag">Image Processing</span>
+                        <span class="skill-tag">NoSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Key Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Find Me A Cube</h3>
+                    </div>
+                    <div class="project-content">
+                        <p><strong>Objective:</strong> No cost solution for identifying empty cubes in hybrid workspace</p>
+                        <p><strong>Solution:</strong> Cloud hosted solution using Django REST API, React JS, and MongoDB</p>
+                        <p><strong>Result:</strong> Faster cube identification with analytics for building management</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Automated Smart Reports using Gen AI</h3>
+                    </div>
+                    <div class="project-content">
+                        <p><strong>Objective:</strong> Speed up report collation and reduce manual work</p>
+                        <p><strong>Solution:</strong> Gen AI & prompt engineering to extract and combine information</p>
+                        <p><strong>Result:</strong> Reduced report generation time from 5 days to 30 minutes</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Smart Hiring & Resume Screening</h3>
+                    </div>
+                    <div class="project-content">
+                        <p><strong>Objective:</strong> Help hiring managers screen suitable resumes efficiently</p>
+                        <p><strong>Solution:</strong> LLM models for similarity mapping with job descriptions</p>
+                        <p><strong>Result:</strong> Reduced resume screening time from hours to minutes</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Finance & Stock Markets Analysis</h3>
+                    </div>
+                    <div class="project-content">
+                        <p><strong>Objective:</strong> Fetch financial details and perform fundamental analysis</p>
+                        <p><strong>Solution:</strong> Agentic AI with Python pandas for company analysis</p>
+                        <p><strong>Result:</strong> Automated stock purchase recommendations using phidata</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 <a href="mailto:shenoy.prasad20@gmail.com">shenoy.prasad20@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    📱 <a href="tel:+919740146523">+91 9740146523</a>
+                </div>
+                <div class="contact-item">
+                    💼 <a href="#" target="_blank">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    💻 <a href="#" target="_blank">GitHub Profile</a>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="mailto:shenoy.prasad20@gmail.com" class="btn btn-primary">Send Email</a>
+                <a href="#" class="btn btn-outline">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navigation bar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(26, 26, 46, 0.98)';
+            } else {
+                nav.style.background = 'rgba(26, 26, 46, 0.95)';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
 </html>
