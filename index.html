@@ -226,6 +226,14 @@
             justify-content: center;
             font-size: 4rem;
             color: white;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
         /* Sections */
@@ -383,6 +391,101 @@
             padding: 1.5rem;
         }
 
+        /* Certifications Section */
+        .certifications {
+            background: var(--dark);
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .certification-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .certification-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cert-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-icon {
+            background: var(--gradient);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .cert-info h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .cert-provider {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-type {
+            background: rgba(0, 168, 255, 0.2);
+            color: var(--secondary);
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+
+        .award-card {
+            background: linear-gradient(145deg, rgba(255, 215, 0, 0.1), rgba(255, 193, 7, 0.05));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .award-card::before {
+            background: linear-gradient(90deg, #ffd700, #ffb347);
+        }
+
+        .award-icon {
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+        }
+
+        .award-type {
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+        }
+
         /* Contact Section */
         .contact {
             text-align: center;
@@ -484,6 +587,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -506,7 +610,11 @@
                 </div>
                 <div class="hero-visual">
                     <div class="profile-card">
-                        <div class="profile-image">PP</div>
+                        <div class="profile-image">
+                            <!-- Replace 'path/to/your/image.jpg' with your actual image path -->
+                            <img src="images/profile.jpg" alt="Prasad P R"
+                                onerror="this.style.display='none'; this.parentNode.innerHTML='PP';">
+                        </div>
                         <h3>Prasad P R</h3>
                         <p>AI Software Development Engineer @ Intel</p>
                         <p>📍 Bengaluru, Karnataka, India</p>
@@ -670,6 +778,99 @@
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Awards & Certifications</h2>
+            <div class="certifications-grid">
+                <!-- Awards -->
+                <div class="certification-card award-card">
+                    <div class="cert-header">
+                        <div class="cert-icon award-icon">🏆</div>
+                        <div class="cert-info">
+                            <h3>Divisional Recognition Award (DRA)</h3>
+                            <div class="cert-provider">Intel Corporation</div>
+                            <span class="cert-type award-type">Company Award</span>
+                        </div>
+                    </div>
+                    <p>Recognized for outstanding contributions and exceptional performance in AI software development
+                        projects.</p>
+                </div>
+
+                <div class="certification-card award-card">
+                    <div class="cert-header">
+                        <div class="cert-icon award-icon">⭐</div>
+                        <div class="cert-info">
+                            <h3>Innovation Star</h3>
+                            <div class="cert-provider">Intel Corporation</div>
+                            <span class="cert-type award-type">Innovation Award</span>
+                        </div>
+                    </div>
+                    <p>Awarded for innovative solutions and breakthrough achievements in AI model optimization and
+                        performance enhancement.</p>
+                </div>
+
+                <!-- Certifications -->
+                <div class="certification-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">🎓</div>
+                        <div class="cert-info">
+                            <h3>Deep Learning With PyTorch: Image Segmentation</h3>
+                            <div class="cert-provider">Coursera</div>
+                            <span class="cert-type">Technical Certification</span>
+                        </div>
+                    </div>
+                    <p>Specialized training in image segmentation techniques using PyTorch framework for computer vision
+                        applications.</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">🔗</div>
+                        <div class="cert-info">
+                            <a href="https://www.udemy.com/certificate/UC-0b0ea886-e7d3-4bd7-91cd-741d4399b56f/"
+                                target="_blank">
+                                <h3>LangChain: Develop LLM Powered Applications</h3>
+                            </a>
+                            <div class="cert-provider">Udemy</div>
+                            <span class="cert-type">LLM Certification</span>
+                        </div>
+                    </div>
+                    <p>Comprehensive course on building production-ready applications using LangChain framework and
+                        Large Language Models.</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">🤖</div>
+                        <div class="cert-info">
+                            <a href="https://coursera.org/share/383ea7095df5000ac6c46acc30b037a5" target="_blank">
+                                <h3>Generative AI with Large Language Models</h3>
+                            </a>
+                            <div class="cert-provider">Coursera</div>
+                            <span class="cert-type">AI Certification</span>
+                        </div>
+                    </div>
+                    <p>Advanced certification covering the latest techniques in generative AI and large language model
+                        implementation.</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-header">
+                        <div class="cert-icon">📊</div>
+                        <div class="cert-info">
+                            <h3>Executive PG in AI & Machine Learning</h3>
+                            <div class="cert-provider">IIIT Bangalore & upGrad</div>
+                            <span class="cert-type">Academic Program</span>
+                        </div>
+                    </div>
+                    <p>Executive program with 3.63/4 CGPA covering advanced AI/ML concepts, practical implementations,
+                        and industry applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -690,7 +891,7 @@
             </div>
             <div class="cta-buttons">
                 <a href="mailto:shenoy.prasad20@gmail.com" class="btn btn-primary">Send Email</a>
-                <a href="resume/Prasad_PR_Resume.pdf" class="btn btn-outline">Download Resume</a>
+                <a href="resume/Prasad_PR_Resume.pdf" class="btn btn-outline" target="_blank">Download Resume</a>
             </div>
         </div>
     </section>
