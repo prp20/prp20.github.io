@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -117,8 +118,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .hero-content {
@@ -199,12 +207,12 @@
         }
 
         .profile-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
             border-radius: 20px;
             padding: 2rem;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .profile-image {
@@ -284,10 +292,10 @@
         }
 
         .timeline-content {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             padding: 2rem;
             border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .timeline-content h3 {
@@ -308,10 +316,10 @@
         }
 
         .skill-category {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             padding: 2rem;
             border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
         }
 
@@ -353,16 +361,16 @@
         }
 
         .project-card {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .project-card .project-header {
@@ -406,6 +414,7 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -417,6 +426,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -463,6 +473,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -485,7 +496,9 @@
                 <div class="hero-text">
                     <h1>AI Engineer</h1>
                     <div class="subtitle">Innovative • Experienced • Results-Driven</div>
-                    <p>With 8+ years of experience in developing AI applications using Python, OpenVINO, PyTorch, and TensorFlow. I specialize in optimizing models and building scalable, production-ready AI systems for customer-facing products.</p>
+                    <p>With 8+ years of experience in developing AI applications using Python, OpenVINO, PyTorch, and
+                        TensorFlow. I specialize in optimizing models and building scalable, production-ready AI systems
+                        for customer-facing products.</p>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
                         <a href="#projects" class="btn btn-outline">View Projects</a>
@@ -514,7 +527,8 @@
                         <div class="company">Intel Corporation | Jun 2022 — Present</div>
                         <ul>
                             <li>Achieved 10x performance enhancement on Intel GPU by optimizing transformer models</li>
-                            <li>Implemented automated pipeline reducing benchmarking time from 5 hours to 30 minutes</li>
+                            <li>Implemented automated pipeline reducing benchmarking time from 5 hours to 30 minutes
+                            </li>
                             <li>Developed Real-Time 3D Camera Calibration reducing inference time by 80%</li>
                             <li>Enhanced AI models boosting training and inference speeds by 30%</li>
                         </ul>
@@ -552,13 +566,22 @@
             <h2 class="section-title">Skills & Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>🧠 Machine Learning</h3>
+                    <h3>🧠 AI-ML</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Deep Learning</span>
-                        <span class="skill-tag">Generative AI</span>
-                        <span class="skill-tag">LLM</span>
-                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Machine Learning Algorithms</span>
+                        <span class="skill-tag">Large Language Models</span>
+                        <span class="skill-tag">Natural Language Processing</span>
                         <span class="skill-tag">Computer Vision</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🧠 Generative AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">Vector Databases</span>
+                        <span class="skill-tag">RAG - Retrieval Augmented Generation</span>
+                        <span class="skill-tag">Agentic AI</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -605,9 +628,12 @@
                         <h3>Find Me A Cube</h3>
                     </div>
                     <div class="project-content">
-                        <p><strong>Objective:</strong> No cost solution for identifying empty cubes in hybrid workspace</p>
-                        <p><strong>Solution:</strong> Cloud hosted solution using Django REST API, React JS, and MongoDB</p>
-                        <p><strong>Result:</strong> Faster cube identification with analytics for building management</p>
+                        <p><strong>Objective:</strong> No cost solution for identifying empty cubes in hybrid workspace
+                        </p>
+                        <p><strong>Solution:</strong> Cloud hosted solution using Django REST API, React JS, and MongoDB
+                        </p>
+                        <p><strong>Result:</strong> Faster cube identification with analytics for building management
+                        </p>
                     </div>
                 </div>
                 <div class="project-card">
@@ -685,7 +711,7 @@
         });
 
         // Navigation bar background on scroll
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
                 nav.style.background = 'rgba(26, 26, 46, 0.98)';
@@ -700,7 +726,7 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
@@ -718,6 +744,5 @@
         });
     </script>
 </body>
+
 </html>
-
-
